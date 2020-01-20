@@ -23,7 +23,7 @@ All file are encrypted with asymmetric algorithm.
  - restore.php is a php script to restore file with private key
 
 # Encrypted file format
-each encrypted file contains on first ligne the envelope key in base64 and on the second ligne base64 crypted data.
+each encrypted file contains on first line the envelope key in base64 and on the second line base64 encrypted data.
 
 # Recover example
 ```
