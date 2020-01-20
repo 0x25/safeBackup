@@ -14,7 +14,7 @@ All file are encrypted with asymmetric algorithm.
  1. Generate RSA pem file and extract public.pem (see upload.php file)
  2. Save private.pem in safe place (other sever/keepass...)
  3. Copy repo files in /var/www(/html)
- 4. Install and configure webserver (apache/n,ginx ...) or run php -S 0.0.0.0:8080
+ 4. Install and configure webserver (apache/nginx ...) or run php -S 0.0.0.0:8080
 
 # Files
 
