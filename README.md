@@ -1,4 +1,4 @@
-# safeBackup
+# safeBackup V0 (PoC)
 Web drag and drop interface to backup files with asymmetric key
 
 <p align="center">
@@ -21,6 +21,10 @@ All file are encrypted with asymmetric algorithm.
  - index.php is drag and drop files backup page 
  - upload.php is php file who encrypt data with public key and save file in uploads directory
  - restore.php is a php script to restore file with private key
+
+<p align="center">
+<img src="https://github.com/0x25/safeBackup/blob/master/safeBackup.gif?raw=true" alt="SafeBackup">
+</p>
 
 # Encrypted file format
 each encrypted file contains on first line the envelope key in base64 and on the second line base64 encrypted data.
