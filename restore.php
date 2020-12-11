@@ -2,11 +2,8 @@
 <?php
 
 /**
-
 Script to restore file
-
 php -f restore.php
-
 **/
 
 /** CONFIG **/
@@ -33,27 +30,27 @@ $passPhrase = '';
 if(php_sapi_name() === 'cli'){
         $options = getopt("f:hk::p:");
         if( count($options) === 0 ){
-        	help();	
+        	help();
         }
 
         if(isset($options['h'])){
-        	help();	
+        	help();
         }
 
-        if( isset($options['k']) ){ 
-        	$privKey = $options['k']; 
+        if( isset($options['k']) ){
+        	$privKey = $options['k'];
         }
 
-        if( isset($options['f']) ){ 
-        	$fileName = $options['f']; 
+        if( isset($options['f']) ){
+        	$fileName = $options['f'];
         }
 
-        if( isset($options['p']) ){ 
-        	$passPhrase = $options['p']; 
+        if( isset($options['p']) ){
+        	$passPhrase = $options['p'];
         }
 }
 
-$pem = file_get_contents($privKey);	
+$pem = file_get_contents($privKey);
 if($pem === false){
 	echo "ERROR : Fail open priv key; check path\n";
 	exit(1);

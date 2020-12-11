@@ -42,3 +42,18 @@ More parameters are available with -h option
 -p set the private pem key passphrase if needed
 ```
 
+# Docker
+## Build the image
+```
+docker build --tag safebackup .
+```
+
+## Launch the container to upload data to a specific folder containing public.pem
+```
+docker run --rm -it -v /path/to/vault/:/uploads -p 8080:80 safebackup
+```
+
+## Shell aliases
+```
+alias docker-vault="docker run --rm -it -v /path/to/vault/:/uploads -p 8080:80 safebackup"
+``

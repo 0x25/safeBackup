@@ -19,8 +19,8 @@ update php.ini to download big file
 
 /** CONFIG PARMAS **/
 $ds = DIRECTORY_SEPARATOR;
-$pubKey = 'public.pem';
-$storeFolder = 'uploads';
+$pubKey = '/uploads/public.pem';
+$storeFolder = '/uploads';
 $log = 'out.txt';
 
 /** CODE **/
@@ -51,7 +51,8 @@ if (!empty($_FILES)) {
     $data = file_get_contents($_FILES['file']['tmp_name']);            
     unset($_FILES['file']['tmp_name']);
 
-    $targetPath = dirname( __FILE__ ) . $ds . $storeFolder . $ds;
+    //$targetPath = dirname( __FILE__ ) . $ds . $storeFolder . $ds;
+    $targetPath = $storeFolder . $ds;
     $fileName = $_FILES['file']['name'].'.'.$mktime; //create uniq file name
     $targetFile =  $targetPath.$fileName;
  
