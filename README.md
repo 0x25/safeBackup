@@ -1,4 +1,4 @@
-# safeBackup V0 (PoC)
+# safeBackup V0.1 ^^ (PoC)
 Web drag and drop interface to backup files with asymmetric key
 
 <p align="center">
