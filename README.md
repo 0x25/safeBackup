@@ -12,9 +12,10 @@ All file are encrypted with asymmetric algorithm.
 # Install
 
  1. Generate RSA pem file and extract public.pem (see upload.php file)
- 2. Save private.pem in safe place (other sever/keepass...)
- 3. Copy repo files in /var/www(/html)
- 4. Install and configure webserver (apache/nginx ...) or run php -S 0.0.0.0:8080
+ 2. copy public.pem in uploads folder
+ 3. Save private.pem in safe place (other sever/keepass...)
+ 4. Copy repo files in /var/www(/html)
+ 5. Install and configure webserver (apache/nginx ...) or run php -S 0.0.0.0:8080
 
 # Files
 
@@ -50,10 +51,10 @@ docker build --tag safebackup .
 
 ## Launch the container to upload data to a specific folder containing public.pem
 ```
-docker run --rm -it -d -v /path/to/vault/:/uploads -p 8080:80 safebackup
-```
+docker run --rm -it -d -v /path/to/vault/:/uploads -p 8080:80 --name safebackup safebackup
+```--tag safebackup
 
 ## Shell aliases
 ```
-alias docker-vault="docker run --rm -it -v /path/to/vault/:/uploads -p 8080:80 safebackup"
+alias docker-vault="docker run --rm -it -d -v /path/to/vault/:/uploads -p 8080:80 --name safebackup safebackup"
 ``
