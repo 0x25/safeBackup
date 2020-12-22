@@ -52,9 +52,9 @@ docker build --tag safebackup .
 ## Launch the container to upload data to a specific folder containing public.pem
 ```
 docker run --rm -it -d -v /path/to/vault/:/uploads -p 8080:80 --name safebackup safebackup
-```--tag safebackup
+```
 
 ## Shell aliases
 ```
 alias docker-vault="docker run --rm -it -d -v /path/to/vault/:/uploads -p 8080:80 --name safebackup safebackup"
-``
+```
